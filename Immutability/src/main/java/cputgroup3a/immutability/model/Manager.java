@@ -10,19 +10,19 @@ package cputgroup3a.immutability.model;
  *
  * @author kurvin
  */
-public final class Cashier {
+public final class Manager {
     
     private String Name;
     private int ID;
     
-    private Cashier(){};
+    private Manager(){};
     
-    private Cashier(Cashier item){
+    private Manager(Manager item){
         this.Name = item.Name;
         this.ID = item.ID;
     }
     
-    private Cashier(Builder item){
+    private Manager(Builder item){
         this.Name = item.Name;
         this.ID = item.ID;
     }
@@ -40,13 +40,13 @@ public final class Cashier {
             return this;
         }
         
-        public Builder Cashier(Cashier item){
+        public Builder Manager(Manager item){
             this.Name = item.Name;
             return this;
         }
         
-        public Cashier build(){
-            return new Cashier(this);
+        public Manager build(){
+            return new Manager(this);
         }
     }
 
@@ -61,7 +61,7 @@ public final class Cashier {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + this.ID;
+        hash = 97 * hash + this.ID;
         return hash;
     }
 
@@ -73,7 +73,7 @@ public final class Cashier {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Cashier other = (Cashier) obj;
+        final Manager other = (Manager) obj;
         if (this.ID != other.ID) {
             return false;
         }

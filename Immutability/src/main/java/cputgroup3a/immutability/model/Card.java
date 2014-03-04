@@ -10,48 +10,48 @@ package cputgroup3a.immutability.model;
  *
  * @author kurvin
  */
-public final class Cashier {
+public final class Card {
     
-    private String Name;
+    private String transaction;
     private int ID;
     
-    private Cashier(){};
+    private Card(){};
     
-    private Cashier(Cashier item){
-        this.Name = item.Name;
+    private Card(Card item){
+        this.transaction = item.transaction;
         this.ID = item.ID;
     }
     
-    private Cashier(Builder item){
-        this.Name = item.Name;
+    private Card(Builder item){
         this.ID = item.ID;
+        this.transaction = item.transaction;
     }
     
     public static class Builder{
-        private String Name;
+        private String transaction;
         private int ID;
         
-        public Builder(int ID){
+        public Builder(String item){
+            this.transaction = item;
+        }
+
+        public Builder setID(int ID) {
             this.ID = ID;
-        }
-        
-        public Builder setName(String value){
-            this.Name = value;
             return this;
         }
         
-        public Builder Cashier(Cashier item){
-            this.Name = item.Name;
+        public Builder Card(Card item){
+            this.ID = item.ID;
             return this;
         }
         
-        public Cashier build(){
-            return new Cashier(this);
-        }
+        public Card build(){
+            return new Card(this);
+        }  
     }
 
-    public String getName() {
-        return Name;
+    public String getTransaction() {
+        return transaction;
     }
 
     public int getID() {
@@ -61,7 +61,7 @@ public final class Cashier {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + this.ID;
+        hash = 73 * hash + this.ID;
         return hash;
     }
 
@@ -73,7 +73,7 @@ public final class Cashier {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Cashier other = (Cashier) obj;
+        final Card other = (Card) obj;
         if (this.ID != other.ID) {
             return false;
         }
