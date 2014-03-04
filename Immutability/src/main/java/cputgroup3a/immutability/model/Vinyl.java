@@ -10,7 +10,7 @@ package cputgroup3a.immutability.model;
  *
  * @author kurvin
  */
-public class Vinyl {
+public final class Vinyl {
     private String album;
     private String artist;
     private int ID;

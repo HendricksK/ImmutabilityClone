@@ -10,53 +10,54 @@ package cputgroup3a.immutability.model;
  *
  * @author kurvin
  */
-public final class CD {
+public final class ListeningStation {
+    
     private String album;
     private String artist;
     private int ID;
     
-    private CD(){};
+    private ListeningStation(){};
     
-    private CD(CD item){
+    private ListeningStation(ListeningStation item){
         this.album = item.album;
         this.artist = item.artist;
         this.ID = item.ID;
     }
     
-    private CD(Builder item){
+    private ListeningStation(Builder item){
         this.album = item.album;
         this.artist = item.artist;
         this.ID = item.ID;
     }
     
-        public static class Builder{
-            private String album;
-            private String artist;
-            private int ID;
-            
-            public Builder(int ID){
-                this.ID = ID;
+            public static class Builder{
+                private String album;
+                private String artist;
+                private int ID;
+
+                public Builder(int ID){
+                    this.ID = ID;
+                }
+
+            public Builder setAlbum(String album) {
+                this.album = album;
+                return this;
             }
 
-        public Builder setAlbum(String album) {
-            this.album = album;
-            return this;
-        }
+            public Builder setArtist(String artist) {
+                this.artist = artist;
+                return this;
+            }
 
-        public Builder setArtist(String artist) {
-            this.artist = artist;
-            return this;
-        }
-        
-        public Builder CD(CD item){
-            this.album = item.album;
-            this.artist = item.artist;
-            return this;
-        }
-            
-        public CD build(){
-            return new CD(this);
-        }    
+            public Builder ListeningStation(ListeningStation item){
+                this.album = item.album;
+                this.artist = item.artist;
+                return this;
+            }
+
+            public ListeningStation build(){
+                return new ListeningStation(this);
+            }    
     }
 
     public String getAlbum() {
@@ -70,13 +71,11 @@ public final class CD {
     public int getID() {
         return ID;
     }
-        
-    
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + this.ID;
+        int hash = 7;
+        hash = 83 * hash + this.ID;
         return hash;
     }
 
@@ -88,12 +87,12 @@ public final class CD {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final CD other = (CD) obj;
+        final ListeningStation other = (ListeningStation) obj;
         if (this.ID != other.ID) {
             return false;
         }
         return true;
     }
         
-        
+    
 }
