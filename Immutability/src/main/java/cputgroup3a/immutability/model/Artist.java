@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author kurvin
  */
-public class Artist {
+public final class Artist {
+    
     private String alias;
     private String names;
     private int ID;
@@ -64,8 +65,6 @@ public class Artist {
                 return this;
             }
             
-            
-
             public Builder Artist(Artist item){
                 names = item.names;
                 alias = item.alias;
