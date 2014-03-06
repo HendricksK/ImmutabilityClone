@@ -6,6 +6,8 @@
 
 package cputgroup3a.immutability.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -16,6 +18,7 @@ public final class Genre {
     
     private String name;
     private int ID;
+    private List<Artist> artists = new ArrayList();
     
     private Genre(){};
     
@@ -32,6 +35,7 @@ public final class Genre {
         public static class Builder{
             private String name;
             private int ID;
+            private List<Artist> artists = new ArrayList();
 
             public Builder(int value){
                 this.ID = value;
@@ -44,13 +48,18 @@ public final class Genre {
 
             public Builder Genre(Genre item){
                 name = item.name;
+                this.artists = item.artists;
+                return this;
+            }
+
+            public Builder setArtists(List<Artist> artists) {
+                this.artists = artists;
                 return this;
             }
 
             public Genre build(){
                 return new Genre(this);
             }
-
 
         }
 
@@ -61,6 +70,11 @@ public final class Genre {
     public int getID() {
         return ID;
     }
+
+    public List<Artist> getArtists() {
+        return artists;
+    }
+    
 
     @Override
     public int hashCode() {

@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package cputgroup3a.immutability.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -13,20 +14,24 @@ import java.util.Objects;
  * @author kurvin
  */
 public final class Artist {
-    
+
     private String alias;
     private String names;
     private int ID;
+    private List<Album> albums = new ArrayList();
+
+    private Artist() {
+    }
+
+    ;
     
-    private Artist(){};
-    
-    private Artist(Builder item){
+    private Artist(Builder item) {
         names = item.names;
         ID = item.ID;
         alias = item.alias;
     }
-    
-    private Artist(Artist item){
+
+    private Artist(Artist item) {
         this.names = item.names;
         this.ID = item.ID;
         this.alias = item.alias;
@@ -43,40 +48,49 @@ public final class Artist {
     public int getID() {
         return ID;
     }
+
+    public List<Album> getAlbums() {
+        return albums;
+    }
     
-    
-    
-        public static class Builder{
-            private String alias;
-            private String names;
-            private int ID;
+    public static class Builder {
 
-            public Builder(int value){
-                this.ID = value;
-            }
+        private String alias;
+        private String names;
+        private int ID;
+        private List<Album> albums = new ArrayList();
 
-            public Builder setName(String value) {
-                this.names = value;
-                return this;
-            }
-
-            public Builder setAlias(String alias) {
-                this.alias = alias;
-                return this;
-            }
-            
-            public Builder Artist(Artist item){
-                names = item.names;
-                alias = item.alias;
-                return this;
-            }
-
-            public Artist build(){
-                return new Artist(this);
-            }
-
-
+        public Builder(int value) {
+            this.ID = value;
         }
+
+        public Builder setName(String value) {
+            this.names = value;
+            return this;
+        }
+
+        public Builder setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+
+        public Builder setAlbums(List<Album> albums) {
+            this.albums = albums;
+            return this;
+        }
+
+        public Builder Artist(Artist item) {
+            names = item.names;
+            alias = item.alias;
+            albums = item.albums;
+            return this;
+        }
+
+        public Artist build() {
+            return new Artist(this);
+        }
+
+    }
 
     @Override
     public int hashCode() {
@@ -99,6 +113,5 @@ public final class Artist {
         }
         return true;
     }
-        
-    
+
 }

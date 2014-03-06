@@ -65,6 +65,7 @@ public final class ListeningStation {
         public Builder ListeningStation(ListeningStation item) {
             this.album = item.album;
             this.artist = item.artist;
+            this.albumList = item.albumList;
             return this;
         }
 

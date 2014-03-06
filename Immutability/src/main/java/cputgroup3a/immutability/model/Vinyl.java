@@ -62,6 +62,7 @@ public final class Vinyl {
         public Builder Vinyl(Vinyl item){
             this.album = item.album;
             this.artist = item.artist;
+            this.songList = item.songList;
             return this;
         }
             

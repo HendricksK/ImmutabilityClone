@@ -6,6 +6,9 @@
 
 package cputgroup3a.immutability.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kurvin
@@ -14,6 +17,7 @@ public final class Dvd {
     private String album;
     private String artist;
     private int ID;
+    private List<Song> playList = new ArrayList();
     
     private Dvd(){};
     
@@ -33,6 +37,7 @@ public final class Dvd {
             private String album;
             private String artist;
             private int ID;
+            private List<Song> playList = new ArrayList();
             
             public Builder(int ID){
                 this.ID = ID;
@@ -45,6 +50,11 @@ public final class Dvd {
 
         public Builder setArtist(String artist) {
             this.artist = artist;
+            return this;
+        }
+
+        public Builder setPlayList(List<Song> playList) {
+            this.playList = playList;
             return this;
         }
         
@@ -69,6 +79,10 @@ public final class Dvd {
 
     public int getID() {
         return ID;
+    }
+
+    public List<Song> getPlayList() {
+        return playList;
     }
 
     @Override

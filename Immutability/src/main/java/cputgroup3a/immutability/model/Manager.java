@@ -6,6 +6,9 @@
 
 package cputgroup3a.immutability.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kurvin
@@ -14,6 +17,8 @@ public final class Manager {
     
     private String Name;
     private int ID;
+    private List<Cashier> cashierList = new ArrayList();
+    private List<ProductBuyer> buyerList = new ArrayList();
     
     private Manager(){};
     
@@ -30,6 +35,8 @@ public final class Manager {
     public static class Builder{
         private String Name;
         private int ID;
+        private List<Cashier> cashierList = new ArrayList();
+        private List<ProductBuyer> buyerList = new ArrayList();
         
         public Builder(int ID){
             this.ID = ID;
@@ -37,6 +44,16 @@ public final class Manager {
         
         public Builder setName(String value){
             this.Name = value;
+            return this;
+        }
+
+        public Builder setCashierList(List<Cashier> cashierList) {
+            this.cashierList = cashierList;
+            return this;
+        }
+
+        public Builder setBuyerList(List<ProductBuyer> buyerList) {
+            this.buyerList = buyerList;
             return this;
         }
         
@@ -56,6 +73,14 @@ public final class Manager {
 
     public int getID() {
         return ID;
+    }
+
+    public List<Cashier> getCashierList() {
+        return cashierList;
+    }
+
+    public List<ProductBuyer> getBuyerList() {
+        return buyerList;
     }
 
     @Override

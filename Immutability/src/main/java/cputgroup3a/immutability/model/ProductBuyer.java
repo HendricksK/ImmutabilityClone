@@ -6,6 +6,9 @@
 
 package cputgroup3a.immutability.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kurvin
@@ -13,6 +16,8 @@ package cputgroup3a.immutability.model;
 public class ProductBuyer {
     private String Name;
     private int ID;
+    private List<MediaSupplier> mediaSuppList = new ArrayList();
+    private List<DeviceSupplier> deviceSuppList = new ArrayList();
     
     private ProductBuyer(){};
     
@@ -29,6 +34,8 @@ public class ProductBuyer {
     public static class Builder{
         private String Name;
         private int ID;
+        private List<MediaSupplier> mediaSuppList = new ArrayList();
+        private List<DeviceSupplier> deviceSuppList = new ArrayList();
         
         public Builder(int ID){
             this.ID = ID;
@@ -43,6 +50,16 @@ public class ProductBuyer {
             this.Name = item.Name;
             return this;
         }
+
+        public Builder setMediaSuppList(List<MediaSupplier> mediaSuppList) {
+            this.mediaSuppList = mediaSuppList;
+            return this;
+        }
+
+        public Builder setDeviceSuppList(List<DeviceSupplier> deviceSuppList) {
+            this.deviceSuppList = deviceSuppList;
+            return this;
+        }
         
         public ProductBuyer build(){
             return new ProductBuyer(this);
@@ -55,6 +72,14 @@ public class ProductBuyer {
 
     public int getID() {
         return ID;
+    }
+
+    public List<MediaSupplier> getMediaSuppList() {
+        return mediaSuppList;
+    }
+
+    public List<DeviceSupplier> getDeviceSuppList() {
+        return deviceSuppList;
     }
 
     @Override

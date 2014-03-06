@@ -6,6 +6,9 @@
 
 package cputgroup3a.immutability.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kurvin
@@ -14,6 +17,10 @@ public final class Cashier {
     
     private String Name;
     private int ID;
+    private List<PurchaseCD> cdPurchases = new ArrayList();
+    private List<PurchaseDevice> devicePurchases = new ArrayList();
+    private List<PurchaseDvd> dvdPurchases = new ArrayList();
+    private List<PurchaseVinyl> vinylPurchases = new ArrayList();
     
     private Cashier(){};
     
@@ -30,6 +37,10 @@ public final class Cashier {
     public static class Builder{
         private String Name;
         private int ID;
+        private List<PurchaseCD> cdPurchases = new ArrayList();
+        private List<PurchaseDevice> devicePurchases = new ArrayList();
+        private List<PurchaseDvd> dvdPurchases = new ArrayList();
+        private List<PurchaseVinyl> vinylPurchases = new ArrayList();
         
         public Builder(int ID){
             this.ID = ID;
@@ -39,9 +50,33 @@ public final class Cashier {
             this.Name = value;
             return this;
         }
+
+        public Builder setCdPurchases(List<PurchaseCD> cdPurchases) {
+            this.cdPurchases = cdPurchases;
+            return this;
+        }
+
+        public Builder setDevicePurchases(List<PurchaseDevice> devicePurchases) {
+            this.devicePurchases = devicePurchases;
+            return this;
+        }
+
+        public Builder setDvdPurchases(List<PurchaseDvd> dvdPurchases) {
+            this.dvdPurchases = dvdPurchases;
+            return this;
+        }
+
+        public Builder setVinylPurchases(List<PurchaseVinyl> vinylPurchases) {
+            this.vinylPurchases = vinylPurchases;
+            return this;
+        }
         
         public Builder Cashier(Cashier item){
             this.Name = item.Name;
+            this.cdPurchases = item.cdPurchases;
+            this.devicePurchases = item.devicePurchases;
+            this.dvdPurchases = item.dvdPurchases;
+            this.vinylPurchases = item.vinylPurchases;
             return this;
         }
         
@@ -56,6 +91,22 @@ public final class Cashier {
 
     public int getID() {
         return ID;
+    }
+
+    public List<PurchaseCD> getCdPurchases() {
+        return cdPurchases;
+    }
+
+    public List<PurchaseDevice> getDevicePurchases() {
+        return devicePurchases;
+    }
+
+    public List<PurchaseDvd> getDvdPurchases() {
+        return dvdPurchases;
+    }
+
+    public List<PurchaseVinyl> getVinylPurchases() {
+        return vinylPurchases;
     }
 
     @Override
