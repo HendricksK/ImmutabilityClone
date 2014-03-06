@@ -3,61 +3,74 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package cputgroup3a.immutability.model;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author kurvin
  */
 public final class ListeningStation {
-    
+
     private String album;
     private String artist;
     private int ID;
+    private List<Album> albumList = new ArrayList();
+
+    private ListeningStation() {
+    }
+
+    ;
     
-    private ListeningStation(){};
-    
-    private ListeningStation(ListeningStation item){
+    private ListeningStation(ListeningStation item) {
         this.album = item.album;
         this.artist = item.artist;
         this.ID = item.ID;
     }
-    
-    private ListeningStation(Builder item){
+
+    private ListeningStation(Builder item) {
         this.album = item.album;
         this.artist = item.artist;
         this.ID = item.ID;
     }
-    
-            public static class Builder{
-                private String album;
-                private String artist;
-                private int ID;
 
-                public Builder(int ID){
-                    this.ID = ID;
-                }
+    public static class Builder {
 
-            public Builder setAlbum(String album) {
-                this.album = album;
-                return this;
-            }
+        private String album;
+        private String artist;
+        private int ID;
+        private List<Album> albumList = new ArrayList();
 
-            public Builder setArtist(String artist) {
-                this.artist = artist;
-                return this;
-            }
+        public Builder(int ID) {
+            this.ID = ID;
+        }
 
-            public Builder ListeningStation(ListeningStation item){
-                this.album = item.album;
-                this.artist = item.artist;
-                return this;
-            }
+        public Builder setAlbum(String album) {
+            this.album = album;
+            return this;
+        }
 
-            public ListeningStation build(){
-                return new ListeningStation(this);
-            }    
+        public Builder setArtist(String artist) {
+            this.artist = artist;
+            return this;
+        }
+
+        public Builder setAlbumList(List<Album> albumList) {
+            this.albumList = albumList;
+            return this;
+        }
+
+        public Builder ListeningStation(ListeningStation item) {
+            this.album = item.album;
+            this.artist = item.artist;
+            return this;
+        }
+
+        public ListeningStation build() {
+            return new ListeningStation(this);
+        }
     }
 
     public String getAlbum() {
@@ -70,6 +83,10 @@ public final class ListeningStation {
 
     public int getID() {
         return ID;
+    }
+
+    public List<Album> getAlbumList() {
+        return albumList;
     }
 
     @Override
@@ -93,6 +110,5 @@ public final class ListeningStation {
         }
         return true;
     }
-        
-    
+
 }
