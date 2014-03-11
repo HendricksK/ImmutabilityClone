@@ -1,0 +1,247 @@
+@startuml
+annotation java.lang.Override
+annotation org.testng.annotations.AfterClass
+annotation org.testng.annotations.AfterMethod
+annotation org.testng.annotations.BeforeClass
+annotation org.testng.annotations.BeforeMethod
+annotation org.testng.annotations.Test
+class cputgroup3a.immutability.AlbumTest
+class cputgroup3a.immutability.App
+class cputgroup3a.immutability.AppTest
+class cputgroup3a.immutability.ArtistTest
+class cputgroup3a.immutability.CDTest
+class cputgroup3a.immutability.CardTest
+class cputgroup3a.immutability.CashTest
+class cputgroup3a.immutability.CashierTest
+class cputgroup3a.immutability.ChequeTest
+class cputgroup3a.immutability.DeviceSupplierTest
+class cputgroup3a.immutability.DvdTest
+class cputgroup3a.immutability.GenreTest
+class cputgroup3a.immutability.ListeningStationTest
+class cputgroup3a.immutability.ManagerTest
+class cputgroup3a.immutability.MediaSupplierTest
+class cputgroup3a.immutability.ProductBuyerTest
+class cputgroup3a.immutability.PurchaseCDTest
+class cputgroup3a.immutability.PurchaseDeviceTest
+class cputgroup3a.immutability.PurchaseDvdTest
+class cputgroup3a.immutability.PurchaseVinylTest
+class cputgroup3a.immutability.SongTest
+class cputgroup3a.immutability.VinylTest
+class cputgroup3a.immutability.model.Album
+class cputgroup3a.immutability.model.Artist
+class cputgroup3a.immutability.model.CD
+class cputgroup3a.immutability.model.Card
+class cputgroup3a.immutability.model.Cash
+class cputgroup3a.immutability.model.Cashier
+class cputgroup3a.immutability.model.Cheque
+class cputgroup3a.immutability.model.DeviceSupplier
+class cputgroup3a.immutability.model.Dvd
+class cputgroup3a.immutability.model.Genre
+class cputgroup3a.immutability.model.Genre.Builder
+class cputgroup3a.immutability.model.ListeningStation
+class cputgroup3a.immutability.model.Manager
+class cputgroup3a.immutability.model.MediaSupplier
+class cputgroup3a.immutability.model.ProductBuyer
+class cputgroup3a.immutability.model.PurchaseCD
+class cputgroup3a.immutability.model.PurchaseDevice
+class cputgroup3a.immutability.model.PurchaseDvd
+class cputgroup3a.immutability.model.PurchaseVinyl
+class cputgroup3a.immutability.model.Song
+class cputgroup3a.immutability.model.Vinyl
+class java.util.ArrayList
+class java.util.List
+class java.util.Objects
+class junit.framework.Test
+class junit.framework.TestCase
+class junit.framework.TestSuite
+class org.testng.Assert
+interface cputgroup3a.immutability.service.Distribution
+interface cputgroup3a.immutability.service.MediaStore
+interface cputgroup3a.immutability.service.Music
+cputgroup3a.immutability.AlbumTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.AlbumTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.AlbumTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.AlbumTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.AlbumTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.AlbumTest ..> cputgroup3a.immutability.model.Album
+cputgroup3a.immutability.AlbumTest ..> org.testng.Assert
+cputgroup3a.immutability.AppTest ..> junit.framework.Test
+cputgroup3a.immutability.AppTest --|> junit.framework.TestCase
+cputgroup3a.immutability.AppTest ..> junit.framework.TestSuite
+cputgroup3a.immutability.ArtistTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.ArtistTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.ArtistTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.ArtistTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.ArtistTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.ArtistTest ..> cputgroup3a.immutability.model.Artist
+cputgroup3a.immutability.ArtistTest ..> org.testng.Assert
+cputgroup3a.immutability.CDTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.CDTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.CDTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.CDTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.CDTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.CDTest ..> cputgroup3a.immutability.model.CD
+cputgroup3a.immutability.CDTest ..> org.testng.Assert
+cputgroup3a.immutability.CardTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.CardTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.CardTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.CardTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.CardTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.CardTest ..> cputgroup3a.immutability.model.Card
+cputgroup3a.immutability.CardTest ..> org.testng.Assert
+cputgroup3a.immutability.CashTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.CashTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.CashTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.CashTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.CashTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.CashTest ..> cputgroup3a.immutability.model.Cash
+cputgroup3a.immutability.CashTest ..> org.testng.Assert
+cputgroup3a.immutability.CashierTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.CashierTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.CashierTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.CashierTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.CashierTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.CashierTest ..> cputgroup3a.immutability.model.Cashier
+cputgroup3a.immutability.CashierTest ..> org.testng.Assert
+cputgroup3a.immutability.ChequeTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.ChequeTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.ChequeTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.ChequeTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.ChequeTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.ChequeTest ..> cputgroup3a.immutability.model.Cheque
+cputgroup3a.immutability.ChequeTest ..> org.testng.Assert
+cputgroup3a.immutability.DeviceSupplierTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.DeviceSupplierTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.DeviceSupplierTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.DeviceSupplierTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.DeviceSupplierTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.DeviceSupplierTest ..> cputgroup3a.immutability.model.DeviceSupplier
+cputgroup3a.immutability.DeviceSupplierTest ..> org.testng.Assert
+cputgroup3a.immutability.DvdTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.DvdTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.DvdTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.DvdTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.DvdTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.DvdTest ..> cputgroup3a.immutability.model.Dvd
+cputgroup3a.immutability.DvdTest ..> org.testng.Assert
+cputgroup3a.immutability.GenreTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.GenreTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.GenreTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.GenreTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.GenreTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.GenreTest ..> cputgroup3a.immutability.model.Genre
+cputgroup3a.immutability.GenreTest ..> cputgroup3a.immutability.model.Genre.Builder
+cputgroup3a.immutability.GenreTest ..> org.testng.Assert
+cputgroup3a.immutability.ListeningStationTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.ListeningStationTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.ListeningStationTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.ListeningStationTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.ListeningStationTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.ListeningStationTest ..> cputgroup3a.immutability.model.ListeningStation
+cputgroup3a.immutability.ListeningStationTest ..> org.testng.Assert
+cputgroup3a.immutability.ManagerTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.ManagerTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.ManagerTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.ManagerTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.ManagerTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.ManagerTest ..> cputgroup3a.immutability.model.Manager
+cputgroup3a.immutability.ManagerTest ..> org.testng.Assert
+cputgroup3a.immutability.MediaSupplierTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.MediaSupplierTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.MediaSupplierTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.MediaSupplierTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.MediaSupplierTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.MediaSupplierTest ..> cputgroup3a.immutability.model.MediaSupplier
+cputgroup3a.immutability.MediaSupplierTest ..> org.testng.Assert
+cputgroup3a.immutability.ProductBuyerTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.ProductBuyerTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.ProductBuyerTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.ProductBuyerTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.ProductBuyerTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.ProductBuyerTest ..> cputgroup3a.immutability.model.ProductBuyer
+cputgroup3a.immutability.ProductBuyerTest ..> org.testng.Assert
+cputgroup3a.immutability.PurchaseCDTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.PurchaseCDTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.PurchaseCDTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.PurchaseCDTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.PurchaseCDTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.PurchaseCDTest ..> cputgroup3a.immutability.model.PurchaseCD
+cputgroup3a.immutability.PurchaseCDTest ..> org.testng.Assert
+cputgroup3a.immutability.PurchaseDeviceTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.PurchaseDeviceTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.PurchaseDeviceTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.PurchaseDeviceTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.PurchaseDeviceTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.PurchaseDeviceTest ..> cputgroup3a.immutability.model.PurchaseDevice
+cputgroup3a.immutability.PurchaseDeviceTest ..> org.testng.Assert
+cputgroup3a.immutability.PurchaseDvdTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.PurchaseDvdTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.PurchaseDvdTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.PurchaseDvdTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.PurchaseDvdTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.PurchaseDvdTest ..> cputgroup3a.immutability.model.PurchaseDvd
+cputgroup3a.immutability.PurchaseDvdTest ..> org.testng.Assert
+cputgroup3a.immutability.PurchaseVinylTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.PurchaseVinylTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.PurchaseVinylTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.PurchaseVinylTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.PurchaseVinylTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.PurchaseVinylTest ..> cputgroup3a.immutability.model.PurchaseVinyl
+cputgroup3a.immutability.PurchaseVinylTest ..> org.testng.Assert
+cputgroup3a.immutability.SongTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.SongTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.SongTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.SongTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.SongTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.SongTest ..> cputgroup3a.immutability.model.Song
+cputgroup3a.immutability.SongTest ..> org.testng.Assert
+cputgroup3a.immutability.VinylTest ..> org.testng.annotations.AfterClass
+cputgroup3a.immutability.VinylTest ..> org.testng.annotations.AfterMethod
+cputgroup3a.immutability.VinylTest ..> org.testng.annotations.BeforeClass
+cputgroup3a.immutability.VinylTest ..> org.testng.annotations.BeforeMethod
+cputgroup3a.immutability.VinylTest ..> org.testng.annotations.Test
+cputgroup3a.immutability.VinylTest ..> cputgroup3a.immutability.model.Vinyl
+cputgroup3a.immutability.VinylTest ..> org.testng.Assert
+cputgroup3a.immutability.model.Album ..> java.lang.Override
+cputgroup3a.immutability.model.Album ..> java.util.ArrayList
+cputgroup3a.immutability.model.Album ..> java.util.List
+cputgroup3a.immutability.model.Artist ..> java.lang.Override
+cputgroup3a.immutability.model.Artist ..> java.util.ArrayList
+cputgroup3a.immutability.model.Artist ..> java.util.List
+cputgroup3a.immutability.model.Artist ..> java.util.Objects
+cputgroup3a.immutability.model.CD ..> java.lang.Override
+cputgroup3a.immutability.model.CD ..> java.util.ArrayList
+cputgroup3a.immutability.model.CD ..> java.util.List
+cputgroup3a.immutability.model.Card ..> java.lang.Override
+cputgroup3a.immutability.model.Cash ..> java.lang.Override
+cputgroup3a.immutability.model.Cashier ..> java.lang.Override
+cputgroup3a.immutability.model.Cashier ..> java.util.ArrayList
+cputgroup3a.immutability.model.Cashier ..> java.util.List
+cputgroup3a.immutability.model.Cheque ..> java.lang.Override
+cputgroup3a.immutability.model.DeviceSupplier ..> java.lang.Override
+cputgroup3a.immutability.model.Dvd ..> java.lang.Override
+cputgroup3a.immutability.model.Dvd ..> java.util.ArrayList
+cputgroup3a.immutability.model.Dvd ..> java.util.List
+cputgroup3a.immutability.model.Genre ..> java.lang.Override
+cputgroup3a.immutability.model.Genre ..> java.util.ArrayList
+cputgroup3a.immutability.model.Genre ..> java.util.List
+cputgroup3a.immutability.model.Genre ..> java.util.Objects
+cputgroup3a.immutability.model.ListeningStation ..> java.lang.Override
+cputgroup3a.immutability.model.ListeningStation ..> java.util.ArrayList
+cputgroup3a.immutability.model.ListeningStation ..> java.util.List
+cputgroup3a.immutability.model.Manager ..> java.lang.Override
+cputgroup3a.immutability.model.Manager ..> java.util.ArrayList
+cputgroup3a.immutability.model.Manager ..> java.util.List
+cputgroup3a.immutability.model.MediaSupplier ..> java.lang.Override
+cputgroup3a.immutability.model.ProductBuyer ..> java.lang.Override
+cputgroup3a.immutability.model.ProductBuyer ..> java.util.ArrayList
+cputgroup3a.immutability.model.ProductBuyer ..> java.util.List
+cputgroup3a.immutability.model.PurchaseCD ..> java.lang.Override
+cputgroup3a.immutability.model.PurchaseDevice ..> java.lang.Override
+cputgroup3a.immutability.model.PurchaseDvd ..> java.lang.Override
+cputgroup3a.immutability.model.PurchaseVinyl ..> java.lang.Override
+cputgroup3a.immutability.model.Song ..> java.lang.Override
+cputgroup3a.immutability.model.Vinyl ..> java.lang.Override
+cputgroup3a.immutability.model.Vinyl ..> java.util.ArrayList
+cputgroup3a.immutability.model.Vinyl ..> java.util.List
+@enduml
